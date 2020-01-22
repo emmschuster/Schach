@@ -1,0 +1,3 @@
+public enum EFiguren {
+	KOENIG,DAME,LAUFER,SPRINGER,BAUER;
+}
