@@ -2,10 +2,12 @@ abstract class ASpielfigur {
 
 	private EFiguren fig;
 	private int w;
+	private EFarbe fab;
 
-	ASpielfigur(EFiguren x,int wert) {
+	ASpielfigur(EFiguren x,int wert, EFarbe f) {
 		fig=x;
 		w=wert;
+		fab=f;
 	}
 	
 	abstract void wert();
@@ -21,5 +23,6 @@ abstract class ASpielfigur {
 		if (w==5) {
 			System.out.print("ned so viel wert");
 		}
+		System.out.println(" und hat die Farbe "+fab);
 	}
 }
