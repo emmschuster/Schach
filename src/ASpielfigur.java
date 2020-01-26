@@ -2,7 +2,7 @@ abstract class ASpielfigur {
 
 	private EFiguren fig;
 	private int w;
-	private EFarbe fab;
+	public EFarbe fab;
 
 	ASpielfigur(EFiguren x,int wert, EFarbe f) {
 		fig=x;

@@ -1,20 +1,20 @@
 public class Brett {
 	private int anzF = 8;
-//	EFarbe [] [] br;
-//	EFarbe s,w;
 	FigurAllgemein[][] br;
+	EFarbe s=EFarbe.SCHWARZ;
+	EFarbe w=EFarbe.WEISS;
 
 	public Brett(int x) {
-//		s=EFarbe.SCHWARZ;
-//		w=EFarbe.WEISS;
 		br = new FigurAllgemein[x][x];
 	}
 
 	public void befuellen(FigurAllgemein a, int b, int c) {
 		try {
 			if (pureufen(b, c)) {
-				br[b][c] = a;
+				System.out.println(b+" x "+c+" ist schon besetzt"); return;
 			}
+			br[b][c] = a;
+			System.out.println("Befuellung erfolgreich von feld "+b+" x "+c);
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("Dein Feld existiert nicht, da das Feld nur " + anzF + "x" + anzF + " groﬂ ist");
 		}
@@ -28,6 +28,22 @@ public class Brett {
 		}
 	}
 
+	public int anzInsgFiguren() {
+		int numberOfPieces = anzInsgFiguren(s) + anzInsgFiguren(w);
+		return numberOfPieces;
+	}
+	public int anzInsgFiguren(EFarbe ef) {
+		int anz = 0;
+		for (int i = 0; i < br.length; i++) {
+			for (int j = 0; j < br[i].length; j++) {
+				if (br[i][j] != null && br[i][j].fab == ef) {
+					anz++;
+				}
+			}
+		}
+		return anz;
+	}  
+	
 //	public void farbigMachen() {
 //		for(int i = 0; i<anzF; i=i+2) {
 //			br [0] [i] = s;
