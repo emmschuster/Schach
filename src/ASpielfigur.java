@@ -5,9 +5,9 @@ abstract class ASpielfigur {
 	public EFarbe fab;
 
 	ASpielfigur(EFiguren x,int wert, EFarbe f) {
-		fig=x;
-		w=wert;
-		fab=f;
+		this.fig=x;
+		this.w=wert;
+		this.fab=f;
 	}
 	
 	abstract void wert();

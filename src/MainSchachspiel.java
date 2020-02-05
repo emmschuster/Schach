@@ -38,7 +38,8 @@ public class MainSchachspiel {
 		System.out.println("und so viele sind schwarz : "+x.anzInsgFiguren(sch));
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~");
 		System.out.println("Brett Visualisiert");
-		System.out.println("Kleinbuchstaben stehen für weiss und Großbuchstaben sind schwarz");
+//		wie mach i des mit weiss und schwarz???
+//		System.out.println("klein = weiss und gross= schwarz");
 		x.bAusgabe();
 	}
 }

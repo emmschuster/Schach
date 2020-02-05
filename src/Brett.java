@@ -46,15 +46,16 @@ public class Brett {
 	
 	public void bAusgabe () {	//ok rip ausbessern
 		for (int i = 0; i < br.length; i++) {
+			System.out.print("|");
 			for (int j = 0; j < br.length; j++) {
 				try {
-				System.out.println("| "+br[i][j].fig+" |	");
+				System.out.print(br[i][j].fig+" |");
 				} catch (Exception e) {
-					System.out.print("| x ");
+					System.out.print(" x |");
 				}
 			}
-			System.out.println("| ");
-			System.out.println("----------------------------------------------------------");
+			System.out.println(" ");
+			System.out.println("--------------------------------------------");
 		}
 	}
 }
