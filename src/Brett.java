@@ -14,7 +14,7 @@ public class Brett {
 				System.out.println(b+" x "+c+" ist schon besetzt"); return;
 			}
 			br[b][c] = a;
-			System.out.println("Befuellung erfolgreich von feld "+b+" x "+c);
+			System.out.print("Befuellung erfolgreich von feld "+b+" x "+c+" mit:");
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("Dein Feld existiert nicht, da das Feld nur " + anzF + "x" + anzF + " groﬂ ist");
 		}
@@ -44,13 +44,17 @@ public class Brett {
 		return anz;
 	}  
 	
-//	public void farbigMachen() {
-//		for(int i = 0; i<anzF; i=i+2) {
-//			br [0] [i] = s;
-//		}
-//		for(int i=1; i <=anzF; i=i+2) {
-//			br [1] [i] =w;
-//		}
-//	}
-
+	public void bAusgabe () {	//ok rip ausbessern
+		for (int i = 0; i < br.length; i++) {
+			for (int j = 0; j < br.length; j++) {
+				try {
+				System.out.println("| "+br[i][j].fig+" |	");
+				} catch (Exception e) {
+					System.out.print("| x ");
+				}
+			}
+			System.out.println("| ");
+			System.out.println("----------------------------------------------------------");
+		}
+	}
 }
